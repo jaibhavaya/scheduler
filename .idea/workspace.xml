@@ -1,31 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c7e5babf-41b4-4e2f-9fb5-02652427f45b" name="Default" comment="initializing project">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheduler/modules/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheduler/modules/models/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheduler/modules/models/day.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheduler/modules/models/employee.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheduler/requirements.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheduler/scheduler.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheduler/server.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheduler/static/js/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheduler/static/js/controllers/HomeController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheduler/static/js/controllers/ManageEmployeesController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheduler/static/js/controllers/ScheduleController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheduler/static/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheduler/templates/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheduler/templates/partials/home.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheduler/templates/partials/manageEmployees.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/scheduler/README.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/server.py" afterPath="$PROJECT_DIR$/scheduler/creds.py" />
+    <list default="true" id="c7e5babf-41b4-4e2f-9fb5-02652427f45b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheduler/static/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="scheduler.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,11 +44,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scheduler/static/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
               <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -121,16 +109,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
               <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="employee.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scheduler/modules/models/employee.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -346,28 +324,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scheduler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scheduler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -419,6 +375,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scheduler/static" />
       <recent name="$PROJECT_DIR$/scheduler" />
       <recent name="$PROJECT_DIR$/scheduler/static/js" />
     </key>
@@ -1054,7 +1011,7 @@
       <workItem from="1491679967979" duration="231000" />
       <workItem from="1491680209762" duration="178000" />
       <workItem from="1491680476155" duration="115000" />
-      <workItem from="1491680602880" duration="11264000" />
+      <workItem from="1491680602880" duration="11401000" />
     </task>
     <task id="LOCAL-00001" summary="initializing project">
       <created>1491680713386</created>
@@ -1063,11 +1020,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491680713386</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add in support for partials and basic routing.">
+      <created>1491692910052</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1491692910052</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11788000" />
+    <option name="totallyTimeSpent" value="11925000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -1112,7 +1076,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initializing project" />
-    <option name="LAST_COMMIT_MESSAGE" value="initializing project" />
+    <MESSAGE value="add in support for partials and basic routing." />
+    <option name="LAST_COMMIT_MESSAGE" value="add in support for partials and basic routing." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1135,7 +1100,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/scheduler/static/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
@@ -1283,6 +1248,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
