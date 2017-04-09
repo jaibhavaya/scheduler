@@ -1,3 +1,28 @@
-<div>
-    <p>Employee Stuff</p>
+<div ng-init="init()">
+    <button ng-hide="showCreateEmployee" ng-click="toggleShowCreateEmployee()">Create Employee</button>
+    <form ng-show="showCreateEmployee">
+        <label>First Name<input type="text" ng-model="firstName" required></label>
+        <label>Last Name<input type="text" ng-model="lastName" required></label>
+        <label>Middle Name (optional)<input type="text" ng-model="middleName"></label>
+        <label>User Name<input type="text" ng-model="userName" required></label>
+        <button type="submit" ng-click="createEmployee()">Create Employee</button>
+    </form>
+    <h3 ng-show="showAlert">{[{message}]}</h3>
+
+    <table>
+        <tr>
+            <td>User Id</td>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Middle Name</td>
+            <td>User Name</td>
+        </tr>
+        <tr ng-repeat="employee in employees">
+            <td>{[{employee.id}]}</td>
+            <td>{[{employee.firstName}]}</td>
+            <td>{[{employee.lastName}]}</td>
+            <td>{[{employee.middleName}]}</td>
+            <td>{[{employee.userName}]}</td>
+        </tr>
+    </table>
 </div>
