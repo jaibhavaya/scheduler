@@ -17,17 +17,17 @@ def init_db():
     db.create_all()
 
 
-@app.route("/")
+@app.route('/')
 def hello():
     return render_template('index.html')
 
 
-@app.route("/partials/<partial>")
+@app.route('/partials/<partial>')
 def render_partial(partial):
     return render_template('partials/{}'.format(partial))
 
 
-@app.route("/createEmployee", methods=['POST'])
+@app.route('/createEmployee', methods=['POST'])
 def create_employee():
     json = request.get_json()
     first_name = json['firstName']
@@ -35,9 +35,8 @@ def create_employee():
     middle_name = json['middleName']
     user_name = json['userName']
     employee = Employee(first_name, last_name, middle_name, user_name)
-    db.session.add(employee)
     try:
-        db.session.commit()
+        employee.create()
     except exc.IntegrityError:
         db.session.rollback()
         return '', 403
@@ -45,7 +44,7 @@ def create_employee():
     return jsonify({'id': employee.id})
 
 
-@app.route("/getEmployees")
+@app.route('/getEmployees')
 def get_employees():
     employees = Employee.query.all()
     return_list = []
@@ -61,5 +60,35 @@ def get_employees():
     return jsonify({'employees': return_list})
 
 
-if __name__ == "__main__":
+@app.route('/getEmployeeDays')
+def get_employee_days():
+    start_date = request.args['startDate']
+    end_date = request.args['endDate']
+    employees = Employee.get_all()
+    output_list = []
+    for employee in employees:
+        employee_dict = {
+            'employee': {
+                'firstName': employee.first_name,
+                'lastName': employee.last_name,
+                'middleName': employee.middle_name,
+                'userName': employee.user_name
+            },
+            'days': []
+        }
+        for day in employee.days.filter(Day.date.between(start_date, end_date)):
+            employee_dict[day.date] = day.hours
+        output_list.append(employee_dict)
+
+    return jsonify({'employeeDays': output_list})
+
+
+@app.route('/deleteEmployee', methods=['POST'])
+def delete_employee():
+    employee_id = request.get_json()['id']
+
+    Employee.delete_by_id(employee_id)
+    return 'success', 200
+
+if __name__ == '__main__':
     app.run(debug=True)

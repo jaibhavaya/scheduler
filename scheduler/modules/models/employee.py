@@ -14,3 +14,16 @@ class Employee(db.Model):
         self.last_name = last_name
         self.middle_name = middle_name
         self.user_name = user_name
+
+    @staticmethod
+    def delete_by_id(id):
+        Employee.query.filter_by(id=id).delete()
+        db.session.commit()
+
+    def create(self):
+        db.session.add(self)
+        db.session.commit()
+
+    @staticmethod
+    def get_all():
+        return Employee.query.all()

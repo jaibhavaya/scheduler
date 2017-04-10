@@ -1,3 +1,14 @@
-<div>
+<div ng-init="init()">
     <button ng-click="setRoute('manageEmployees')">Manage Employees</button>
+
+    <table>
+        <tr>
+            <th>Employee</th>
+            <th ng-repeat="day in week">{[{day}]}</th>
+        </tr>
+        <tr ng-repeat="schedule in employeeDays">
+            <td>{[{schedule.employee.firstName + ' ' + schedule.employee.firstName}]}</td>
+            <td ng-repeat="day in week">{[{day}]}</td>
+        </tr>
+    </table>
 </div>

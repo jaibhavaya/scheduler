@@ -1,5 +1,5 @@
 (function () {
-    var app = angular.module('Scheduler', ['ngRoute'])
+    var app = angular.module('Scheduler', ['ngRoute', 'angularMoment'])
         .config(function ($interpolateProvider, $routeProvider) {
             $interpolateProvider
                 .startSymbol('{[{')

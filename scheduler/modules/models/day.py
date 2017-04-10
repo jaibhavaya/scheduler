@@ -8,7 +8,7 @@ class Day(db.Model):
     employee_id = db.Column(db.Integer, db.ForeignKey('employee.id'))
     hours = db.Column(db.Float)
 
-    employee = db.relationship('Employee', backref=db.backref('posts', lazy='dynamic'))
+    employee = db.relationship('Employee', backref=db.backref('days', lazy='dynamic'))
 
     def __init__(self, employee, date, hours):
         self.employee = employee

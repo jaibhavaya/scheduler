@@ -4,7 +4,9 @@
   "description": "a schedule app for shift based employees",
   "main": "index.js",
   "dependencies": {
-    "angular": "^1.6.4"
+    "angular": "^1.6.4",
+    "angular-moment": "^1.0.1",
+    "moment": "^2.18.1"
   },
   "devDependencies": {},
   "scripts": {

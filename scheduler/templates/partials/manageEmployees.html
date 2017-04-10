@@ -1,21 +1,37 @@
 <div ng-init="init()">
     <button ng-hide="showCreateEmployee" ng-click="toggleShowCreateEmployee()">Create Employee</button>
     <form ng-show="showCreateEmployee">
-        <label>First Name<input type="text" ng-model="firstName" required></label>
-        <label>Last Name<input type="text" ng-model="lastName" required></label>
-        <label>Middle Name (optional)<input type="text" ng-model="middleName"></label>
-        <label>User Name<input type="text" ng-model="userName" required></label>
+        <table>
+            <tr>
+                <td><label for="firstNameText">First Name</label></td>
+                <td><input type="text" ng-model="firstName" id="firstNameText" required></td>
+            </tr>
+            <tr>
+                <td><label for="lastNameText">Last Name</label></td>
+                <td><input type="text" ng-model="lastName" id="lastNameText" required></td>
+            </tr>
+            <tr>
+                <td><label for="middleNameText">Middle Name (optional)</label></td>
+                <td><input type="text" ng-model="middleName" id="middleNameText"></td>
+            </tr>
+            <tr>
+                <td><label for="userNameText">User Name</label></td>
+                <td><input type="text" ng-model="userName" id="userNameText" required></td>
+            </tr>
+
+        </table>
         <button type="submit" ng-click="createEmployee()">Create Employee</button>
     </form>
     <h3 ng-show="showAlert">{[{message}]}</h3>
 
     <table>
         <tr>
-            <td>User Id</td>
-            <td>First Name</td>
-            <td>Last Name</td>
-            <td>Middle Name</td>
-            <td>User Name</td>
+            <th>User Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Middle Name</th>
+            <th>User Name</th>
+            <th></th>
         </tr>
         <tr ng-repeat="employee in employees">
             <td>{[{employee.id}]}</td>
@@ -23,6 +39,8 @@
             <td>{[{employee.lastName}]}</td>
             <td>{[{employee.middleName}]}</td>
             <td>{[{employee.userName}]}</td>
+            <td><button ng-click="deleteEmployee(employee.id)">Delete</button></td>
         </tr>
     </table>
+    <button ng-click="setRoute('home')">Home</button>
 </div>
