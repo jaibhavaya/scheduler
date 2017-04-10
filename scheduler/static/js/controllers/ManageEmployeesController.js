@@ -8,6 +8,7 @@
         $scope.lastName = null;
         $scope.middleName = null;
         $scope.userName = null;
+        $scope.showAlert = false;
 
         $scope.init = function () {
             getEmployees();
@@ -42,8 +43,11 @@
                     $scope.showAlert = true;
                     $scope.message = 'Successfully Created Employee ' + $scope.lastName + ', ' + $scope.firstName + ' ';
                     setTimeout(function () {
+                        console.log('showAlert is - ' + $scope.showAlert);
                         $scope.showAlert = false;
+                        console.log('showAlert now is - ' + $scope.showAlert);
                         $scope.message = '';
+                        $scope.$apply();
                     }, 3000);
                     getEmployees();
                 },function (response) {
